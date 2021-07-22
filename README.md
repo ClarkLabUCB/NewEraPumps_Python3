@@ -43,7 +43,7 @@ We reccommend that you use Anaconda to install the latest version of Python 3 as
 3. Download the Pump Program Files from GitHub
    - Navigate to the GitHub page [here](https://github.com/ClarkLabUCB/NewEraPumps_Python3)
    - Click the green button that says **Code** and select **Download ZIP**
-   - Extract the files and move the file into your documents or destination of choice.
+   - Download and extract the file and move it into your documents or destination of choice.
 
 #### Optional Step to Create an Executable Program on your Machine
 If you have found that these programs work with your pumps and are connected to your COM port of choice, then feel free to create an executable program of the pump program on your machine by following these steps:
@@ -65,3 +65,14 @@ If you have found that these programs work with your pumps and are connected to 
   ```
 - This will create a bundle in a subfolder named **dist**, which will contain the executable application named pump_control3.exe. This app can then be used to run pumps on any computer without the need of Python or any of the packages. **Please be warned that you will need to use the same COM port that you used in the code when you created the app with pyinstaller.**
 
+## Usage
+
+Python code (.py files) will not be executable from Windows File Explorer unless you add Python to the PATH. This can be a tricky process, and we will not go into it. Instead, it is best to either execute the program from the *Anaconda Prompt* or by creating a Windows batch file (.bat). 
+
+* To run from the *Anaconda Prompt*
+  * Open *Anaconda Prompt*
+  * Navigate to your current folder run the pump_control3.py code (example)
+    ```sh
+    cd C:\User\YourUserName\Documents\PumpProgram3
+    python pump_control3.py
+    ```
