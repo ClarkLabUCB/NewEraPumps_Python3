@@ -42,8 +42,7 @@ We reccommend that you use Anaconda to install the latest version of Python 3 as
    - If prompted enter “**y**” to proceed with the installation
 3. Download the Pump Program Files from GitHub
    - Navigate to the GitHub page [here](https://github.com/ClarkLabUCB/NewEraPumps_Python3)
-   - Click the green button that says **Code**
-     - Click **Download ZIP**
+   - Click the green button that says **Code** and select **Download ZIP**
    - Extract the files and move the file into your documents or destination of choice.
 
 #### Optional Step to Create an Executable Program on your Machine
