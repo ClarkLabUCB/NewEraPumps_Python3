@@ -2,7 +2,7 @@
 
 ## About the Project
 
-These programs provide a GUI to run New Era NE-500 One Channel Syringe Pumps in Python. The interface includes the ability to set both syringe size and forward/reverse flow, pump labeling, pump priming, and the ability to easiliy stop or update flow settings.  
+These programs provide a GUI to run New Era NE-500 OEM One Channel Syringe Pumps in Python. The interface includes the ability to set both syringe size and forward/reverse flow, pump labeling, pump priming, and the ability to easiliy stop or update flow settings.  
 
 This code was originally written in the Abate Lab at UC San Francisco by Phil Romero. It was resurrected by John Halliburton for use with Python 3 and updated into its present form by Kevin Joslin and Sakshi Shah while rotating in the Clark lab. We hope you find it useful. Versions for Py2.7 and Qt4 can be found at https://github.com/RomeroLab/syringe-pump-controller. 
 
@@ -42,4 +42,11 @@ We reccommend that you use Anaconda to install the latest version of Python 3 as
      conda install -c anaconda pyserial
      ```
    - If prompt enter “**y**” to proceed with the installation
+3. Download the Pump Program Files from GitHub
+   - The download page can be found [here](/New_Era_Pump_Programs_Python3.zip)
+   - The files are located in a zip file named New_Era_Pump_Programs_Python3.zip. The following three files should be located in the zip file:
+     - pump_control3.py
+     - new_era3.py
+     - set_pump_number3.py
+   - Extract the files and move the *New_Era_Pump_Programs* file into your documents or destination of choice.
 
