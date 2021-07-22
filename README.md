@@ -26,8 +26,7 @@ We reccommend that you use Anaconda to install the latest version of Python 3 as
 1. Installing [PyQt5](https://pypi.org/project/PyQt5/)
    - **Note**: If you installed Anaconda then PyQt should already be within your usuable packages and there is not need to install PyQt5 separately. If this is the case you may skip this step. If not, execute the folowing steps to install PyQt5.
      - Open *Anaconda Prompt* as administrator 
-       - Right click Anaconda Prompt and click “**run as administrator**” 
-       - Click "**yes**" when prompted
+       - Right click Anaconda Prompt and select **run as administrator >** **yes**
      - Enter the command
        ```sh
        conda install -c anaconda PyQt5
@@ -35,13 +34,12 @@ We reccommend that you use Anaconda to install the latest version of Python 3 as
      - If prompt enter “**y**” to proceed with the installation
 2. Installing [Pyserial](https://pythonhosted.org/pyserial/index.html) (we use version 3.4)
    - Open *Anaconda Prompt* as administrator 
-       - Right click Anaconda Prompt and click “**run as administrator**” 
-       - Click "**yes**" when prompted
+     - Right click Anaconda Prompt and select **run as administrator >** **yes**
    - Enter the command
      ```sh
      conda install -c anaconda pyserial
      ```
-   - If prompt enter “**y**” to proceed with the installation
+   - If prompted enter “**y**” to proceed with the installation
 3. Download the Pump Program Files from GitHub
    - Navigate to the GitHub page [here](https://github.com/ClarkLabUCB/NewEraPumps_Python3)
    - Click the green button that says **Code**
@@ -56,7 +54,7 @@ If you have found that these programs work with your pumps and are connected to 
       ```sh
       conda install -c pyinstaller
       ```
-    - If prompt enter “**y**” to proceed with the installation
+    - If prompted enter “**y**” to proceed with the installation
 - Reopen *Anaconda Prompt* as administrator
 - Navigate to the current directory of the pump programs (both new_era3.py and pump_control3.py must be in this folder) with the **cd** command. An example looks like this:
   ```sh
