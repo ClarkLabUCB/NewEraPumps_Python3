@@ -43,10 +43,28 @@ We reccommend that you use Anaconda to install the latest version of Python 3 as
      ```
    - If prompt enter “**y**” to proceed with the installation
 3. Download the Pump Program Files from GitHub
-   - The download page can be found [here](/New_Era_Pump_Programs_Python3.zip)
-   - The files are located in a zip file named New_Era_Pump_Programs_Python3.zip. The following three files should be located in the zip file:
-     - pump_control3.py
-     - new_era3.py
-     - set_pump_number3.py
-   - Extract the files and move the *New_Era_Pump_Programs* file into your documents or destination of choice.
+   - Navigate to the GitHub page [here](https://github.com/ClarkLabUCB/NewEraPumps_Python3)
+   - Click the green button that says **Code**
+     - Click **Download ZIP**
+   - Extract the files and move the file into your documents or destination of choice.
+
+#### Optional Step to Create an Executable Program on your Machine
+If you have found that these programs work with your pumps and are connected to your COM port of choice, then feel free to create an executable program of the pump program on your machine by following these steps:
+- Install [Pyinstaller](https://www.pyinstaller.org/#) (we used version 3.6)
+  - Open *Anaconda Prompt* as administrator as outlined above
+    - Enter the command
+      ```sh
+      conda install -c pyinstaller
+      ```
+    - If prompt enter “**y**” to proceed with the installation
+- Reopen *Anaconda Prompt* as administrator
+- Navigate to the current directory of the pump programs (both new_era3.py and pump_control3.py must be in this folder) with the **cd** command. An example looks like this:
+  ```sh
+  cd C:\User\YourUserName\Documents\PumpProgram3
+  ```
+- Execute the following line of code to create an executable Windows application (.exe file) for the pump program
+  ```sh
+  pyinstaller pump_control3.py
+  ```
+- This will create a bundle in a subfolder named **dist**, which will contain the executable application named pump_control3.exe. This app can then be used to run pumps on any computer without the need of Python or any of the packages. **Please be warned that you will need to use the same COM port that you used in the code when you created the app with pyinstaller.**
 
