@@ -26,7 +26,7 @@ We reccommend that you use Anaconda to install the latest version of Python 3 as
 1. Installing [PyQt5](https://pypi.org/project/PyQt5/)
    - **Note**: If you installed Anaconda then PyQt should already be within your usuable packages and there is not need to install PyQt5 separately. If this is the case you may skip this step. If not, execute the folowing steps to install PyQt5.
      - Open *Anaconda Prompt* as administrator 
-       - Right click Anaconda Prompt and select **run as administrator >** **yes**
+       - Right click Anaconda Prompt and select **Run as Administrator >** **Yes**
      - Enter the command
        ```sh
        conda install -c anaconda PyQt5
@@ -34,7 +34,7 @@ We reccommend that you use Anaconda to install the latest version of Python 3 as
      - If prompt enter “**y**” to proceed with the installation
 2. Installing [Pyserial](https://pythonhosted.org/pyserial/index.html) (we use version 3.4)
    - Open *Anaconda Prompt* as administrator 
-     - Right click Anaconda Prompt and select **run as administrator >** **yes**
+     - Right click Anaconda Prompt and select **Run as Administrator >** **Yes**
    - Enter the command
      ```sh
      conda install -c anaconda pyserial
