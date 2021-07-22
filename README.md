@@ -45,7 +45,47 @@ We reccommend that you use Anaconda to install the latest version of Python 3 as
    - Click the green button that says **Code** and select **Download ZIP**
    - Download and extract the file and move it into your documents or destination of choice.
 
-#### Optional Step to Create an Executable Program on your Machine
+## Usage
+
+Python code (.py files) will not be executable from Windows File Explorer unless you add Python to the PATH. This can be a tricky process, and we will not go into it. Instead, it is best to either execute the program from the *Anaconda Prompt*, by creating a Windows batch file (.bat), or by creating a standalone app with *pyinstaller* The batch file and *pysinstaller* approach will be outlined in the [Alternative Execution Methods](#alternative-execution-methods) section. 
+
+* To run from the *Anaconda Prompt*
+  * Open *Anaconda Prompt*
+  * Navigate to your current folder run the pump_control3.py code (example)
+    ```sh
+    cd C:\User\YourUserName\Documents\PumpProgram3
+    python pump_control3.py
+    ```
+
+## Alternative Execution Methods
+
+### Create a Batch File to Run a Python Script
+
+A batch file is a file that will execute execute whatever script is written within it in the Windows command prompt. This can be used to create a file that will run the code necessary to launch the python script for the pump program. 
+
+1. Locate the address of the activate.bat that activates the anaconda directory. This should be in the Scripts folder within the Anaconda3 folder on your computer. You may need to click view, then check “Hidden Items” in the Show/hide tab. An example location of this is: 
+   ```sh
+      C:\Users\YourUserName\anaconda3\Scripts\activate.bat
+   ```
+	Or
+   ```sh
+      C:\ProgramData\Anaconda3\Scripts\activate.bat
+   ```
+2. Locate the address of the folder that the pump control execution .py file **pump_control3.py** is located
+3. Open the *Notepad* app on Windows
+4. On the first line **call** the Anaconda activate.bat file, on the second line, use the command **cd** and to change the directory to the folder address, and on the third line run the pump control program with python pump_control3.py. An example looks like this:
+   ```sh
+      call C:\Users\YourUserName\anaconda3\Scripts\activate.bat
+	   cd C:\User\YourUserName\Documents\PumpProgram3
+	   Python pump_control3.py
+   ```
+ 5. When you have written those three lines, and those three lines only. Select **File > Save As**
+ 6. In the **Save** menu select **Save as Type > ALL Files**
+ 7. Name your batch file whatever you want, like Run_pump_control.bat, as long as it ends in ".bat"
+    - **Note:** It is the .bat extension that will save this file as a Windows Batch file that will run those commands in the windows prompt. The first line changes the windows prompt to the anaconda prompt, the second line changes the directory to your pump program folder location, and the last line runs the pump program.
+8. Double clicking this .bat file from any location should run the commands and open the pump program. You can now just leave this .bat on the desktop for you to click whenever you want to run the pump control program.
+
+### Create an Executable Program on your Machine with Pyinstaller
 If you have found that these programs work with your pumps and are connected to your COM port of choice, then feel free to create an executable program of the pump program on your machine by following these steps:
 - Install [Pyinstaller](https://www.pyinstaller.org/#) (we used version 3.6)
   - Open *Anaconda Prompt* as administrator as outlined above
@@ -64,17 +104,3 @@ If you have found that these programs work with your pumps and are connected to 
   pyinstaller pump_control3.py
   ```
 - This will create a bundle in a subfolder named **dist**, which will contain the executable application named pump_control3.exe. This app can then be used to run pumps on any computer without the need of Python or any of the packages. **Please be warned that you will need to use the same COM port that you used in the code when you created the app with pyinstaller.**
-
-## Usage
-
-Python code (.py files) will not be executable from Windows File Explorer unless you add Python to the PATH. This can be a tricky process, and we will not go into it. Instead, it is best to either execute the program from the *Anaconda Prompt*, by creating a Windows batch file (.bat), or by creating a standalone app with *pyinstaller* The batch file and *pysinstaller* approach will be outlined in the [Alternative Execution Methods](#alternative-execution-methods) section. 
-
-* To run from the *Anaconda Prompt*
-  * Open *Anaconda Prompt*
-  * Navigate to your current folder run the pump_control3.py code (example)
-    ```sh
-    cd C:\User\YourUserName\Documents\PumpProgram3
-    python pump_control3.py
-    ```
-
-## Alternative Execution Methods
