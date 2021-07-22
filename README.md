@@ -67,7 +67,7 @@ If you have found that these programs work with your pumps and are connected to 
 
 ## Usage
 
-Python code (.py files) will not be executable from Windows File Explorer unless you add Python to the PATH. This can be a tricky process, and we will not go into it. Instead, it is best to either execute the program from the *Anaconda Prompt* or by creating a Windows batch file (.bat). 
+Python code (.py files) will not be executable from Windows File Explorer unless you add Python to the PATH. This can be a tricky process, and we will not go into it. Instead, it is best to either execute the program from the *Anaconda Prompt*, by creating a Windows batch file (.bat), or by creating a standalone app with *pyinstaller* The batch file and *pysinstaller* approach will be outlined in the [Alternative Execution Methods](#alternative-execution-methods) section. 
 
 * To run from the *Anaconda Prompt*
   * Open *Anaconda Prompt*
@@ -76,3 +76,5 @@ Python code (.py files) will not be executable from Windows File Explorer unless
     cd C:\User\YourUserName\Documents\PumpProgram3
     python pump_control3.py
     ```
+
+## Alternative Execution Methods
