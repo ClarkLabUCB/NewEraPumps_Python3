@@ -127,8 +127,8 @@ A batch file is a file that will execute execute whatever script is written with
 4. On the first line **call** the Anaconda activate.bat file, on the second line, use the command **cd** and to change the directory to the folder address, and on the third line run the pump control program with python pump_control3.py. An example looks like this:
    ```sh
       call C:\Users\YourUserName\anaconda3\Scripts\activate.bat
-	   cd C:\User\YourUserName\Documents\PumpProgram3
-	   Python pump_control3.py
+      cd C:\User\YourUserName\Documents\PumpProgram3
+      Python pump_control3.py
    ```
  5. When you have written those three lines, and those three lines only. Select **File > Save As**
  6. In the **Save** menu select **Save as Type > ALL Files**
