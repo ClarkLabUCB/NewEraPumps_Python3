@@ -81,7 +81,7 @@ It is probably most helpful to label to the pumps 1,2,3,4,5... and so on. At thi
 
 ### Using the Pump GUI
 
-An overview of the Pump GUI is shown below. For every pump tethered into the system., a line appears with a drop down menu to select for a 1 mL, 3mL, 5 mL, or 10 mL syringe, an editable field to name the contents of the pump, an editable field to input a nominal (positive or negative integer) flowrate, a drop down menu to choose between units of uL/hr and mL/hour, its nominal current flow rate, the units of the current flow rate, and a **Prime** button, which will set the flow rate of that pump to 10,000 uL/hour. If the pump has a positive flow rate (out of the syringe), the flow will be shown as positive, if the pump has a negative flow rate (into the syringe), the flow will be shown as negative. At the top of the GUI are the **Run/Update** button and the **Stop** button. **Run/Update** will set the 
+An overview of the Pump GUI is shown below. For every pump tethered into the system., a line appears with a drop down menu to select for a 1 mL, 3mL, 5 mL, or 10 mL syringe, an editable field to name the contents of the pump, an editable field to input a nominal (positive or negative integer) flowrate, a drop down menu to choose between units of uL/hr and mL/hour, its nominal current flow rate, the units of the current flow rate, and a **Prime** button, which will set the flow rate of that pump to 10,000 uL/hour. If the pump has a positive flow rate (out of the syringe), the flow will be shown as positive, if the pump has a negative flow rate (into the syringe), the flow will be shown as negative. At the top of the GUI are the **Run/Update** button and the **Stop** button. **Run/Update** will set the the flow rates of the connected pumps to the user-sepecified flowrates, **Stop** will set the flow rates of all pumps to 0. **IMPORTANT** In order to change the syringe size or units you need to **Stop** all pumps, then change the syringe size or units and then press **Run/Update** again. You **CANNOT** simply change the syringe size/units and press **Run/Update**. 
 
 #### Assign Pump Fluid Names
 Assign pump fluid names by clicking the edit field next 
@@ -112,7 +112,8 @@ A batch file is a file that will execute execute whatever script is written with
  6. In the **Save** menu select **Save as Type > ALL Files**
  7. Name your batch file whatever you want, like Run_pump_control.bat, as long as it ends in ".bat"
     - **Note:** It is the .bat extension that will save this file as a Windows Batch file that will run those commands in the windows prompt. The first line changes the windows prompt to the anaconda prompt, the second line changes the directory to your pump program folder location, and the last line runs the pump program.
-8. Double clicking this .bat file from any location should run the commands and open the pump program. You can now just leave this .bat on the desktop for you to click whenever you want to run the pump control program.
+
+Double clicking this .bat file from any location should run the commands and open the pump program. You can now just leave this .bat on the desktop for you to click whenever you want to run the pump control program.
 
 ### Create an Executable Program on your Machine with Pyinstaller
 If you have found that these programs work with your pumps and are connected to your COM port of choice, then feel free to create an executable program of the pump program on your machine by following these steps:
@@ -132,6 +133,7 @@ If you have found that these programs work with your pumps and are connected to 
   ```sh
   pyinstaller pump_control3.py
   ```
+  
 This will create a bundle in a subfolder named **dist**, which will contain the executable application named pump_control3.exe. This app can then be used to run pumps on any computer without the need of Python or any of the packages. **Please be warned that you will need to use the same COM port that you used in the code when you created the app with pyinstaller.**
 
 
