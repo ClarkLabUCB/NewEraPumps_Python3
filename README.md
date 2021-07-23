@@ -47,7 +47,9 @@ We recommend that you use Anaconda to install the latest version of Python 3 as 
 
 ## Usage
 
-Python code (.py files) will not be executable from Windows File Explorer unless you add Python to the PATH. This can be a tricky process, and we will not go into it. Instead, it is best to either execute the program from the *Anaconda Prompt*, by creating a Windows batch file (.bat), or by creating a standalone app with *pyinstaller* The batch file and *pysinstaller* approach will be outlined in the [Alternative Execution Methods](#alternative-execution-methods) section. 
+### Running the Scripts
+
+Python code (.py files) will not be executable from Windows File Explorer unless you add Python to the PATH. This can be a tricky process, and we will not go into it. Instead, it is best to either execute the program from the *Anaconda Prompt*, by creating a Windows batch file (.bat), or by creating a standalone app with *pyinstaller*. The batch file and *pysinstaller* approach will be outlined in the [Alternative Execution Methods](#alternative-execution-methods) section. 
 
 * To run from the *Anaconda Prompt*
   * Open *Anaconda Prompt*
@@ -56,6 +58,33 @@ Python code (.py files) will not be executable from Windows File Explorer unless
     cd C:\User\YourUserName\Documents\PumpProgram3
     python pump_control3.py
     ```
+### Setting up the Pump(s)
+
+#### Setting the COM port Number
+
+The pumps need to be tethered together with ethernet cables which will eventually terminate into a COM port in the computer. Determine what COM port your pumps are connected to the computer with by opening the *Device Manager* on Windows. When you are positive of the COM port number that your devices are connected to the computer with, you will need to open both the pump_control3.py script and then set_pump_number3.py script and change the COM port number to that number. For example if your COM port number is **COM1**, then the line of code in the scripts that sets the COM port number should look like this: 
+   ```sh
+   serial_port = 'COM1'
+   ```
+#### Setting Individual Pump Numbers
+    
+While it is common in many applications to tether pumps together, the pump program requires that each of the pumps be named a unique single digit integer (0-9). Perform the following steps to name each pump:
+1. Make sure that only one pump is connected to the computer
+2. Run the **set_pump_number3.py** script, a windows command prompt will open and show you the current pump number assigned to the pump.
+3. Enter a new pump number (0-9)
+4. The program will assign the new pump number to the pump and confirm the new pump number.
+5. Press enter to close the pump program
+6. Label the pump with a piece of tape or a label maker so that you know which pump number is assigned to that pump from now on.
+7. Repeat steps 1-6 with every pump, ensuring that you use a unique integer for every pump. 
+
+It is probably most helpful to label to the pumps 1,2,3,4,5... and so on. At this time, the pump assignment script can only label the pumps with an integer 0-9, so if you have more than 10 pumps tethered together you will have to edit the script yourself.
+
+### Using the Pump GUI
+
+An overview of the Pump GUI is shown below. For every pump tethered into the system., a line appears with a drop down menu to select for a 1 mL, 3mL, 5 mL, or 10 mL syringe, an editable field to name the contents of the pump, an editable field to input a nominal (positive or negative integer) flowrate, a drop down menu to choose between units of uL/hr and mL/hour, its nominal current flow rate, the units of the current flow rate, and a **Prime** button, which will set the flow rate of that pump to 10,000 uL/hour. If the pump has a positive flow rate (out of the syringe), the flow will be shown as positive, if the pump has a negative flow rate (into the syringe), the flow will be shown as negative. At the top of the GUI are the **Run/Update** button and the **Stop** button. **Run/Update** will set the 
+
+#### Assign Pump Fluid Names
+Assign pump fluid names by clicking the edit field next 
 
 ## Alternative Execution Methods
 
@@ -65,11 +94,11 @@ A batch file is a file that will execute execute whatever script is written with
 
 1. Locate the address of the activate.bat that activates the anaconda directory. This should be in the Scripts folder within the Anaconda3 folder on your computer. You may need to click view, then check “Hidden Items” in the Show/hide tab. An example location of this is: 
    ```sh
-      C:\Users\YourUserName\anaconda3\Scripts\activate.bat
+   C:\Users\YourUserName\anaconda3\Scripts\activate.bat
    ```
 	Or
    ```sh
-      C:\ProgramData\Anaconda3\Scripts\activate.bat
+   C:\ProgramData\Anaconda3\Scripts\activate.bat
    ```
 2. Locate the address of the folder that the pump control execution .py file **pump_control3.py** is located
 3. Open the *Notepad* app on Windows
