@@ -116,22 +116,22 @@ A batch file is a file that will execute execute whatever script is written with
 
 ### Create an Executable Program on your Machine with Pyinstaller
 If you have found that these programs work with your pumps and are connected to your COM port of choice, then feel free to create an executable program of the pump program on your machine by following these steps:
-- Install [Pyinstaller](https://www.pyinstaller.org/#) (we used version 3.6)
-  - Open *Anaconda Prompt* as administrator as outlined above
-    - Enter the command
-      ```sh
-      conda install -c pyinstaller
-      ```
-    - If prompted enter “**y**” to proceed with the installation
-- Reopen *Anaconda Prompt* as administrator
-- Navigate to the current directory of the pump programs (both new_era3.py and pump_control3.py must be in this folder) with the **cd** command. An example looks like this:
+1. Install [Pyinstaller](https://www.pyinstaller.org/#) (we used version 3.6)
+2. Open *Anaconda Prompt* as administrator as outlined above
+   - Enter the command
+     ```sh
+     conda install -c pyinstaller
+     ```
+   - If prompted enter “**y**” to proceed with the installation
+3. Reopen *Anaconda Prompt* as administrator
+4. Navigate to the current directory of the pump programs (both new_era3.py and pump_control3.py must be in this folder) with the **cd** command. An example looks like this:
   ```sh
   cd C:\User\YourUserName\Documents\PumpProgram3
   ```
-- Execute the following line of code to create an executable Windows application (.exe file) for the pump program
+5. Execute the following line of code to create an executable Windows application (.exe file) for the pump program
   ```sh
   pyinstaller pump_control3.py
   ```
-- This will create a bundle in a subfolder named **dist**, which will contain the executable application named pump_control3.exe. This app can then be used to run pumps on any computer without the need of Python or any of the packages. **Please be warned that you will need to use the same COM port that you used in the code when you created the app with pyinstaller.**
+This will create a bundle in a subfolder named **dist**, which will contain the executable application named pump_control3.exe. This app can then be used to run pumps on any computer without the need of Python or any of the packages. **Please be warned that you will need to use the same COM port that you used in the code when you created the app with pyinstaller.**
 
 
