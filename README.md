@@ -24,7 +24,7 @@
 
 These programs provide a GUI to run New Era NE-500 OEM One Channel Syringe Pumps in Python. The interface includes the ability to set both syringe size and forward/reverse flow, pump labeling, pump priming, and the ability to easily stop or update flow settings.  
 
-This code was originally written in the Abate Lab at UC San Francisco by Phil Romero. It was resurrected by John Halliburton for use with Python 3 and updated into its present form by Kevin Joslin and Sakshi Shah while rotating in the Clark lab. We hope you find it useful. Versions for Py2.7 and Qt4 can be found at https://github.com/RomeroLab/syringe-pump-controller. 
+This code was originally written in the Abate Lab at UC San Francisco by Phil Romero. It was resurrected by John Halliburton for use with Python 3 and updated into its present form by Kevin Joslin and Sakshi Shah while rotating in the Clark lab. We hope you find it useful. Versions for Py2.7 and Qt4 can be found [here](https://github.com/RomeroLab/syringe-pump-controller). 
 
 ### Built With
 
