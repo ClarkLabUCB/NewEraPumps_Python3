@@ -1,5 +1,25 @@
 # GUI to run NEW ERA NE-500 OEM One Channel Syringe Pumps
 
+## Table of Contents
+
+1. [About the Project](#about-the-project)
+   - [Built With](#built-with)
+2. [Getting Started](#getting-started)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+3. [Usage](#usage)
+   - [Running the Scripts](#running-the-scripts)
+   - [Setting up the Pumps](#setting-up-the-pumps)
+     - [Setting the COM port Number](#setting-the-com-port-number)
+     - [Setting Individual Pump Numbers](#setting-individual-pump-numbers)
+   - [Using the Pump GUI](#using-the-pump-gui)
+     - [Assign Pump Fluid Names](#assign-pump-fluid-names)
+     - [Change the Flow Rate](#change-the-flow-rate)
+4. [Alternative Execution Methods](#alternative-execution-methods)
+   - [Create a Batch File to Run a Python Script](#create-a-batch-file-to-run-a-python-script)
+   - [Create an Executable Program on your Machine with Pyinstaller](#create-an-executable-program-on-your-machine-with-pyinstaller)
+
+
 ## About the Project
 
 These programs provide a GUI to run New Era NE-500 OEM One Channel Syringe Pumps in Python. The interface includes the ability to set both syringe size and forward/reverse flow, pump labeling, pump priming, and the ability to easily stop or update flow settings.  
@@ -58,7 +78,7 @@ Python code (.py files) will not be executable from Windows File Explorer unless
     cd C:\User\YourUserName\Documents\PumpProgram3
     python pump_control3.py
     ```
-### Setting up the Pump(s)
+### Setting up the Pumps
 
 #### Setting the COM port Number
 
