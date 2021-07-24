@@ -39,7 +39,7 @@ This software has only been tested on PC desktops running Windows 10. Any adapta
 
 * [Anaconda](https://www.anaconda.com/)
 
-We recommend that you use Anaconda to install the latest version of Python 3 as well for installing required packages. Detailed instructions for installing Anaconda on windows can be found [here](https://docs.anaconda.com/anaconda/install/windows/). In most cases you will be installing the 64-Bit Graphical Installer. We recommend that you do **not** check "Add Anaconda3 to my PATH environmental variable" at this time. Once you have Anaconda downloaded and installed you can proceed to the installation of the programs.
+We recommend that you use Anaconda to install the latest version of Python 3 as well for installing required packages; it will also come with packages to run PyQt interfaces with no setup. Detailed instructions for installing Anaconda on windows can be found [here](https://docs.anaconda.com/anaconda/install/windows/). In most cases you will be installing the 64-Bit Graphical Installer. We recommend that you do **not** check "Add Anaconda3 to my PATH environmental variable" at this time. Once you have Anaconda downloaded and installed you can proceed to the installation of the programs.
 
 ### Installation
 
