@@ -103,7 +103,7 @@ It is probably most helpful to label to the pumps 1,2,3,4,5... and so on. At thi
 
 An overview of the Pump GUI is shown below.
 
-![example pump image](/ne-500-cutoutlong.jpeg)
+![example pump image](/pump_control_gui.png)
 
 For every pump tethered into the system., a line appears with a drop down menu to select for a 1 mL, 3mL, 5 mL, or 10 mL syringe, an editable field to name the contents of the pump, an editable field to input a nominal (positive or negative integer) flowrate, a drop down menu to choose between units of uL/hr and mL/hour, its nominal current flow rate, the units of the current flow rate, and a **Prime** button, which will set the flow rate of that pump to 10,000 uL/hour. If the pump has a positive flow rate (out of the syringe), the flow will be shown as positive, if the pump has a negative flow rate (into the syringe), the flow will be shown as negative. At the top of the GUI are the **Run/Update** button and the **Stop** button. **Run/Update** will set the the flow rates of the connected pumps to the user-sepecified flowrates, **Stop** will set the flow rates of all pumps to 0. **IMPORTANT** In order to change the syringe size or units you need to **Stop** all pumps, then change the syringe size or units and then press **Run/Update** again. You **CANNOT** simply change the syringe size/units and press **Run/Update**. 
 
