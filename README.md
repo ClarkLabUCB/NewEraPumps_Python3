@@ -13,8 +13,10 @@
      - [Setting the COM port Number](#setting-the-com-port-number)
      - [Setting Individual Pump Numbers](#setting-individual-pump-numbers)
    - [Using the Pump GUI](#using-the-pump-gui)
-     - [Assign Pump Fluid Names](#assign-pump-fluid-names)
-     - [Change the Flow Rate](#change-the-flow-rate)
+     - [Assign Pump Syringe Size](#assign-pump-syringe-size)
+     - [Assign Pump Content Names](#assign-pump-content-names)
+     - [Assign the Flow Rate](#change-the-flow-rate) 
+     - [Priming Pumps](#priming-pumps) 
 4. [Alternative Execution Methods](#alternative-execution-methods)
    - [Create a Batch File to Run a Python Script](#create-a-batch-file-to-run-a-python-script)
    - [Create an Executable Program on your Machine with Pyinstaller](#create-an-executable-program-on-your-machine-with-pyinstaller)
@@ -22,7 +24,7 @@
 
 ## About the Project
 
-These programs provide a GUI to run New Era NE-500 OEM One Channel Syringe Pumps in Python. The interface includes the ability to set both syringe size and forward/reverse flow, pump labeling, pump priming, and the ability to easily stop or update flow settings.  
+These programs provide a GUI to run New Era NE-500 OEM One Channel Syringe Pumps with 1 mL, 3 mL, 5 mL, or 10 mL Becton Dickinson syringes in Python. The interface includes the ability to set both syringe size and forward/reverse flow, pump labeling, pump priming, and the ability to easily stop or update flow settings.  
 
 This code was originally written in the Abate Lab at UC San Francisco by Phil Romero. It was resurrected by John Halliburton for use with Python 3 and updated into its present form by Kevin Joslin and Sakshi Shah while rotating in the Clark lab. We hope you find it useful. Versions for Py2.7 and Qt4 can be found [here](https://github.com/RomeroLab/syringe-pump-controller). 
 
@@ -105,14 +107,19 @@ An overview of the Pump GUI is shown below.
 
 ![example pump image](/pump_control_gui.png)
 
-For every pump tethered into the system., a line appears with a drop down menu to select for a 1 mL, 3mL, 5 mL, or 10 mL syringe, an editable field to name the contents of the pump, an editable field to input a nominal (positive or negative integer) flowrate, a drop down menu to choose between units of uL/hr and mL/hour, its nominal current flow rate, the units of the current flow rate, and a **Prime** button, which will set the flow rate of that pump to 10,000 uL/hour. If the pump has a positive flow rate (out of the syringe), the flow will be shown as positive, if the pump has a negative flow rate (into the syringe), the flow will be shown as negative. At the top of the GUI are the **Run/Update** button and the **Stop** button. **Run/Update** will set the the flow rates of the connected pumps to the user-sepecified flowrates, **Stop** will set the flow rates of all pumps to 0. **IMPORTANT** In order to change the syringe size or units you need to **Stop** all pumps, then change the syringe size or units and then press **Run/Update** again. You **CANNOT** simply change the syringe size/units and press **Run/Update**. 
+For every pump tethered into the system., a line appears with the assigned pump number, a drop down menu to select for a 1 mL, 3 mL, 5 mL, or 10 mL Becton Dickinson syringe, an editable field to name the contents of the pump, an editable field to input a nominal (positive or negative integer) flowrate, its nominal current flow rate, the units of the current flow rate, and a **Prime** button, which will set the flow rate of that pump to 10,000 uL/hour. If the pump has a positive flow rate (out of the syringe), the flow will be shown as positive, if the pump has a negative flow rate (into the syringe), the flow will be shown as negative. At the top of the GUI are the **Run/Update** button and the **Stop** button. **Run/Update** will set the the flow rates of the connected pumps to the user-sepecified flowrates, **Stop** will set the flow rates of all pumps to 0. **IMPORTANT** In order to change the syringe size or units you need to **Stop** all pumps, then change the syringe size or units and then press **Run/Update** again. You **CANNOT** simply change the syringe size/units and press **Run/Update**. 
 
+#### Assign Pump Syringe Size
+The software is calibrated to run the user-input flow rates at 4 different Becton Dickinson (BD) syringe sizes: 1 mL, 3 mL, 5 mL, or 10 mL. The default syringe size is 1 mL. To change the the syringe size for any given pump, first press **Stop**. **WARNING**: It is extremeley important to press stop and stop all pumps before changing syringe size; if you change syringe size will the pumps are running, the software will **NOT** recognize the change in syringe size and assume the flow rate is still based on the assigned syringe size when the pumps were first started. After you have pressed **Stop**, you can click the **Syringe** size drop-down menu and select the correct syringe size. The syringe size for any given pump will remain the same until **Stop** is pressed again or the program is closed. 
 
+#### Assign Pump Content Names
+Assign pump content names by clicking the edit field next pump and entering the name of the pump content (e.g. oil, buffer, etc.). This name will remain the same until re-edited or the program is closed.
 
-#### Assign Pump Fluid Names
-Assign pump fluid names by clicking the edit field next pump and entering the name of the pump fluid (e.g. oil, buffer, etc.)
+#### Assign the Flow Rate
+All flow rates will be in uL/hour. To set the flow rate of a pump, click the edit field under "flow rate" for any given pump and enter your desired flow rate in uL/hour. The flow rate for the pump will not change until you click **Run/Update**. The current set flow rate of any given pump can be seen under the "Current flow rate" column. 
 
-#### Change the Flow Rate
+#### Priming Pumps
+Pressing the **Prime** button for any pump will immediately set the flow rate of that pump to 10,000 uL/hr and start the pump. Essentially, it is equal to typing in 10,000 into the "Flow rate" column and then pressing **Run/Update**. To stop priming a pump, press **Stop**, which will stop all pumps. 
 
 ## Alternative Execution Methods
 
